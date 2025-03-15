@@ -9,8 +9,12 @@ class Home extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(  
-      home: FAppBar(),
+    return Scaffold(  
+      appBar: FAppBar(
+        title: "New Title",secondIcon: Icons.safety_check, firstIcon: Icons.man,
+
+      ),
+      body: Text("hi"),
     );
   }
   
