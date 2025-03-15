@@ -20,11 +20,13 @@ class Home extends StatelessWidget {
         actions: [
           Container(
             padding: const EdgeInsets.all(10),
-            child: Icon(Iconsax.notification_bing_outline)),
+            child: Icon(Iconsax.notification_bing_outline)
+            ),
           Container(
             padding: const EdgeInsets.all(10),
-            child: Icon(Icons.search)),
-          
+            child: Icon(Icons.search)
+          ),
+
         ],
       ),
     );
