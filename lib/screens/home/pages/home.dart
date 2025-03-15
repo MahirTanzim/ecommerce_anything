@@ -1,4 +1,5 @@
 import 'package:ecommerce_anything/common/widget/appbar.dart';
+import 'package:ecommerce_anything/common/widget/banner.dart';
 import 'package:ecommerce_anything/common/widget/product.dart';
 import 'package:ecommerce_anything/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
@@ -15,8 +16,14 @@ class Home extends StatelessWidget {
         title: "New Title",secondIcon: Icons.safety_check, firstIcon: Icons.man,
 
       ),
-      body: Center(
-          child: ProductCard(), 
+      body: Column(
+          children : [
+            Banner1(), 
+            SizedBox(height: 20),
+            ProductCard()
+
+          ],
+
         ),
     );
   }
