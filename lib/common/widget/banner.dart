@@ -1,3 +1,4 @@
+import 'package:ecommerce_anything/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 class Banner1 extends StatelessWidget {
@@ -6,7 +7,7 @@ class Banner1 extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(50),
       decoration: BoxDecoration(
-        color: Colors.blue,
+        color: FColors.oceanBlue,
         borderRadius: BorderRadius.circular(12),
       ),
       child: Row(

@@ -16,15 +16,29 @@ class Home extends StatelessWidget {
         title: "New Title",secondIcon: Icons.safety_check, firstIcon: Icons.man,
 
       ),
-      body: Column(
-          children : [
-            Banner1(), 
-            SizedBox(height: 20),
-            ProductCard()
+     
 
+        bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(Iconsax.home_outline),
+              label: "Home"
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Iconsax.heart_outline),
+              label: "Wishlist"
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Iconsax.shopping_bag_outline),
+              label: "Order"
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Iconsax.user_outline),
+              label: "Account"
+            ),
           ],
-
-        ),
+        )
     );
   }
   
