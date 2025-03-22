@@ -5,10 +5,41 @@ import 'package:ecommerce_anything/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:icons_plus/icons_plus.dart';
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   const Home({super.key});
 
-  
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+
+  int _currentIndex = 0;
+  List<Widget> _pages = [
+    Container(
+      color: Colors.green,
+      height: double.infinity,
+    ),
+    Container(
+      color: Colors.pink,
+      height: double.infinity,
+    ),
+    Container(
+      color: Colors.red,
+      height: double.infinity,
+    ),
+    Container(
+      color: Colors.purple,
+      height: double.infinity,
+    ),
+    
+  ];
+  void _onTapMethod (int index){
+    setState(() {
+      _currentIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(  
@@ -17,8 +48,10 @@ class Home extends StatelessWidget {
 
       ),
      
-
+      body: _pages[_currentIndex],
         bottomNavigationBar: BottomNavigationBar(
+          onTap: _onTapMethod,
+          currentIndex: _currentIndex,
           type: BottomNavigationBarType.fixed,
           items: [
             BottomNavigationBarItem(
@@ -41,6 +74,4 @@ class Home extends StatelessWidget {
         )
     );
   }
-  
-  
 } 
